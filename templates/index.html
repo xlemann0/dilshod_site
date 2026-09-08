@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dilshod Raxmatillayev Sherzodovich</title>
+    <title>Dilshod Raxmatillayev | Portfolio</title>
     <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,20 +21,21 @@
             color: #ffffff;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 40px 20px;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 750px;
             width: 100%;
             text-align: center;
-            padding: 10px;
             animation: fadeIn 0.8s ease-in-out;
         }
 
-        /* Profil rasmi */
+        /* Profil rasmi va Halo effekti */
         .profile-img-container {
             width: 180px;
             height: 180px;
@@ -44,10 +45,11 @@
             background: linear-gradient(135deg, rgba(56, 189, 248, 0.9), rgba(255, 255, 255, 0.2));
             box-shadow: 0 0 45px rgba(14, 165, 233, 0.4);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
         }
 
         .profile-img-container:hover {
-            transform: scale(1.03);
+            transform: scale(1.04);
             box-shadow: 0 0 60px rgba(14, 165, 233, 0.6);
         }
 
@@ -74,6 +76,9 @@
             color: #ffffff;
             letter-spacing: -0.5px;
             line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* Info Card - Glassmorphism */
@@ -84,7 +89,7 @@
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
             padding: 25px 35px;
-            margin: 0 auto 35px auto;
+            margin: 0 auto 30px auto;
             text-align: left;
             max-width: 600px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
@@ -124,6 +129,25 @@
             word-break: break-word;
         }
 
+        /* Ko'nikmalar (Badges) */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .skill-badge {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: #38bdf8;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         /* Ijtimoiy tarmoq tugmalari */
         .social-buttons {
             display: flex;
@@ -161,6 +185,13 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
             border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        .footer-text {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #64748b;
         }
 
         /* Animatsiya */
@@ -220,6 +251,13 @@
         <!-- Sarlavha -->
         <h1 class="main-title">Raxmatillayev Dilshod Sherzodovich</h1>
 
+        <!-- Qiziqishlar / Yo'nalishlar -->
+        <div class="skills-container">
+            <span class="skill-badge"><i class="fa-solid fa-code"></i> Developer</span>
+            <span class="skill-badge"><i class="fa-solid fa-graduation-cap"></i> Student</span>
+            <span class="skill-badge"><i class="fa-solid fa-gears"></i> KSTU</span>
+        </div>
+
         <!-- Ma'lumotlar kartochkasi -->
         <div class="info-card">
             <div class="info-row">
@@ -254,6 +292,9 @@
                 <span>@dilshod.kstu</span>
             </a>
         </div>
+
+        <!-- Pastki mualliflik yozuvi -->
+        <p class="footer-text">© 2026 Dilshod Raxmatillayev. Barcha huquqlarhimoyalangan.</p>
     </div>
 
 </body>
