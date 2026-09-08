@@ -4,72 +4,257 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dilshod Raxmatillayev Sherzodovich</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
         body {
             background: radial-gradient(circle at center, #133945 0%, #081d24 70%, #040f13 100%);
-            color: #ffffff; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
-        .container { max-width: 850px; width: 100%; text-align: center; padding: 20px; }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        /* Profil rasmi */
         .profile-img-container {
-            width: 190px; height: 190px; margin: 0 auto 20px; border-radius: 50%; padding: 4px;
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.8), rgba(255, 255, 255, 0.2));
-            box-shadow: 0 0 50px rgba(14, 165, 233, 0.4);
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.9), rgba(255, 255, 255, 0.2));
+            box-shadow: 0 0 45px rgba(14, 165, 233, 0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
-        .profile-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-        .welcome-text { font-size: 1.15rem; color: #e2e8f0; margin-bottom: 18px; line-height: 1.5; font-weight: 400; }
-        .main-title { font-size: 2.6rem; font-weight: 800; margin-bottom: 35px; color: #ffffff; letter-spacing: -0.5px; }
+
+        .profile-img-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 60px rgba(14, 165, 233, 0.6);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Matnlar */
+        .welcome-text {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .main-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        /* Info Card - Glassmorphism */
         .info-card {
-            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 18px; padding: 25px 40px; margin: 0 auto 35px auto; text-align: left; max-width: 620px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 25px 35px;
+            margin: 0 auto 35px auto;
+            text-align: left;
+            max-width: 600px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
         }
-        .info-row { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); font-size: 1rem; }
-        .info-row:last-child { border-bottom: none; }
-        .info-label { width: 140px; font-weight: 700; color: #ffffff; flex-shrink: 0; }
-        .info-value { color: #cbd5e1; font-weight: 400; }
-        .social-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 1rem;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row i {
+            color: #38bdf8;
+            margin-right: 12px;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .info-label {
+            width: 140px;
+            font-weight: 600;
+            color: #e2e8f0;
+            flex-shrink: 0;
+            text-transform: capitalize;
+        }
+
+        .info-value {
+            color: #ffffff;
+            font-weight: 400;
+            word-break: break-word;
+        }
+
+        /* Ijtimoiy tarmoq tugmalari */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         .social-btn {
-            display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 12px 26px; border-radius: 30px; color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
-        .social-btn i { font-size: 1.2rem; }
+
+        .social-btn i {
+            font-size: 1.2rem;
+        }
+
         .social-btn.telegram i { color: #38bdf8; }
-        .social-btn.email i { color: #94a3b8; }
+        .social-btn.email i { color: #f87171; }
         .social-btn.instagram i { color: #f472b6; }
-        .social-btn:hover { background: rgba(255, 255, 255, 0.18); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Animatsiya */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobil moslashuvchanlik */
         @media (max-width: 650px) {
             .main-title { font-size: 1.8rem; }
-            .welcome-text { font-size: 1rem; }
+            .welcome-text { font-size: 0.98rem; }
             .info-card { padding: 20px; }
-            .info-row { flex-direction: column; align-items: flex-start; }
-            .info-label { margin-bottom: 4px; }
-            .social-buttons { flex-direction: column; }
-            .social-btn { justify-content: center; }
+            
+            .info-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            
+            .info-label {
+                width: 100%;
+                font-size: 0.85rem;
+                color: #94a3b8;
+            }
+
+            .info-value {
+                font-size: 0.98rem;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .social-btn {
+                justify-content: center;
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
+        <!-- Profil rasmi -->
         <div class="profile-img-container">
             <img src="{{ url_for('static', filename='raxdilshodsher.jpg') }}" alt="Dilshod Raxmatillayev" class="profile-img">
         </div>
-        <div class="welcome-text">
+
+        <!-- Kirish matni -->
+        <p class="welcome-text">
             Assalomu alaykum!<br>
-            Men Raxmatillayev Dilshod Sherzodovichning rasmiy saytiman.
-        </div>
+            Raxmatillayev Dilshod Sherzodovichning rasmiy sahifasiga xush kelibsiz.
+        </p>
+
+        <!-- Sarlavha -->
         <h1 class="main-title">Raxmatillayev Dilshod Sherzodovich</h1>
+
+        <!-- Ma'lumotlar kartochkasi -->
         <div class="info-card">
-            <div class="info-row"><span class="info-label">f.i.sh:</span><span class="info-value">Dilshod Raxmatillayev Sherzodovich</span></div>
-            <div class="info-row"><span class="info-label">tugulgan yil:</span><span class="info-value">06.02.2008 yil</span></div>
-            <div class="info-row"><span class="info-label">tugulgan joyi:</span><span class="info-value">Samarqand viloyati, Toyloq tumani, Chubot qishlog'i</span></div>
+            <div class="info-row">
+                <i class="fa-solid fa-user"></i>
+                <span class="info-label">F.I.SH:</span>
+                <span class="info-value">Dilshod Raxmatillayev Sherzodovich</span>
+            </div>
+            <div class="info-row">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span class="info-label">Tug'ilgan yili:</span>
+                <span class="info-value">06.02.2008 yil</span>
+            </div>
+            <div class="info-row">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="info-label">Tug'ilgan joyi:</span>
+                <span class="info-value">Samarqand viloyati, Toyloq tumani, Chubot qishlog'i</span>
+            </div>
         </div>
+
+        <!-- Ijtimoiy tarmoqlar -->
         <div class="social-buttons">
-            <a href="https://t.me/mekhanizatsiya" target="_blank" class="social-btn telegram"><i class="fa-brands fa-telegram"></i><span>@mekhanizatsiya</span></a>
-            <a href="mailto:draxmatilloyev80@gmail.com" class="social-btn email"><i class="fa-regular fa-envelope"></i><span>draxmatilloyev80@gmail.com</span></a>
-            <a href="https://instagram.com/dilshod.kstu" target="_blank" class="social-btn instagram"><i class="fa-brands fa-instagram"></i><span>@dilshod.kstu</span></a>
+            <a href="https://t.me/mekhanizatsiya" target="_blank" class="social-btn telegram">
+                <i class="fa-brands fa-telegram"></i>
+                <span>@mekhanizatsiya</span>
+            </a>
+            <a href="mailto:draxmatilloyev80@gmail.com" class="social-btn email">
+                <i class="fa-regular fa-envelope"></i>
+                <span>draxmatilloyev80@gmail.com</span>
+            </a>
+            <a href="https://instagram.com/dilshod.kstu" target="_blank" class="social-btn instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span>@dilshod.kstu</span>
+            </a>
         </div>
     </div>
+
 </body>
 </html>
