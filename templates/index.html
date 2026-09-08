@@ -38,7 +38,7 @@
             z-index: 2;
         }
 
-        /* Profil rasmi va tarqaluvchi pufakchalar konteyneri */
+        /* Profil rasmi va ko'p tarqaluvchi pufakchalar konteyneri */
         .profile-wrapper {
             position: relative;
             width: 180px;
@@ -88,56 +88,66 @@
             opacity: 0;
         }
 
-        /* Har bir yo'nalish bo'yicha tarqaluvchi animatsiyalar */
-        .bubble:nth-child(1) { width: 16px; height: 16px; animation: burstUp 3s infinite ease-out 0s; }
-        .bubble:nth-child(2) { width: 22px; height: 22px; animation: burstUpRight 3.4s infinite ease-out 0.5s; }
-        .bubble:nth-child(3) { width: 14px; height: 14px; animation: burstRight 2.8s infinite ease-out 1s; }
-        .bubble:nth-child(4) { width: 20px; height: 20px; animation: burstDownRight 3.2s infinite ease-out 0.3s; }
-        .bubble:nth-child(5) { width: 12px; height: 12px; animation: burstDown 3.6s infinite ease-out 1.2s; }
-        .bubble:nth-child(6) { width: 18px; height: 18px; animation: burstDownLeft 3.1s infinite ease-out 0.8s; }
-        .bubble:nth-child(7) { width: 24px; height: 24px; animation: burstLeft 3.5s infinite ease-out 1.5s; }
-        .bubble:nth-child(8) { width: 15px; height: 15px; animation: burstUpLeft 2.9s infinite ease-out 0.2s; }
+        /* Ko'paytirilgan pufakchalar animatsiyalari */
+        .bubble:nth-child(1)  { width: 14px; height: 14px; animation: burstUp 2.8s infinite ease-out 0s; }
+        .bubble:nth-child(2)  { width: 22px; height: 22px; animation: burstUpRight 3.2s infinite ease-out 0.4s; }
+        .bubble:nth-child(3)  { width: 12px; height: 12px; animation: burstRight 2.5s infinite ease-out 0.8s; }
+        .bubble:nth-child(4)  { width: 20px; height: 20px; animation: burstDownRight 3s infinite ease-out 0.2s; }
+        .bubble:nth-child(5)  { width: 16px; height: 16px; animation: burstDown 3.4s infinite ease-out 1s; }
+        .bubble:nth-child(6)  { width: 24px; height: 24px; animation: burstDownLeft 2.9s infinite ease-out 0.6s; }
+        .bubble:nth-child(7)  { width: 10px; height: 10px; animation: burstLeft 3.1s infinite ease-out 1.2s; }
+        .bubble:nth-child(8)  { width: 18px; height: 18px; animation: burstUpLeft 2.7s infinite ease-out 0.3s; }
+        
+        /* Qo'shimcha yangi pufakchalar */
+        .bubble:nth-child(9)  { width: 15px; height: 15px; animation: burstUp 3.5s infinite ease-out 1.5s; }
+        .bubble:nth-child(10) { width: 20px; height: 20px; animation: burstUpRight 2.6s infinite ease-out 1.1s; }
+        .bubble:nth-child(11) { width: 13px; height: 13px; animation: burstRight 3.3s infinite ease-out 0.5s; }
+        .bubble:nth-child(12) { width: 25px; height: 25px; animation: burstDownRight 2.4s infinite ease-out 1.4s; }
+        .bubble:nth-child(13) { width: 11px; height: 11px; animation: burstDown 2.9s infinite ease-out 0.7s; }
+        .bubble:nth-child(14) { width: 19px; height: 19px; animation: burstDownLeft 3.6s infinite ease-out 0.2s; }
+        .bubble:nth-child(15) { width: 17px; height: 17px; animation: burstLeft 2.8s infinite ease-out 0.9s; }
+        .bubble:nth-child(16) { width: 21px; height: 21px; animation: burstUpLeft 3.2s infinite ease-out 1.3s; }
 
-        /* Yo'nalishlar (Keyframes) */
+        /* Tarqalish yo'nalishlari (Keyframes) */
         @keyframes burstUp {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(-50%, -170px) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(-50%, -190px) scale(1.3); opacity: 0; }
         }
         @keyframes burstUpRight {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(120px, -130px) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(140px, -150px) scale(1.3); opacity: 0; }
         }
         @keyframes burstRight {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(160px, -50%) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(180px, -50%) scale(1.3); opacity: 0; }
         }
         @keyframes burstDownRight {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(120px, 110px) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(140px, 130px) scale(1.3); opacity: 0; }
         }
         @keyframes burstDown {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(-50%, 140px) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(-50%, 160px) scale(1.3); opacity: 0; }
         }
         @keyframes burstDownLeft {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(-170px, 110px) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(-190px, 130px) scale(1.3); opacity: 0; }
         }
         @keyframes burstLeft {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(-200px, -50%) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(-220px, -50%) scale(1.3); opacity: 0; }
         }
         @keyframes burstUpLeft {
             0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translate(-150px, -130px) scale(1.3); opacity: 0; }
+            25% { opacity: 0.9; }
+            100% { transform: translate(-170px, -150px) scale(1.3); opacity: 0; }
         }
 
         /* Matnlar */
@@ -358,8 +368,16 @@
 <body>
 
     <div class="container">
-        <!-- Profil rasmi va 360-darajali pufakchalar -->
+        <!-- Profil rasmi va ko'payaetgan 360-darajali pufakchalar -->
         <div class="profile-wrapper">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
             <div class="bubble"></div>
             <div class="bubble"></div>
             <div class="bubble"></div>
@@ -410,12 +428,12 @@
             <div class="info-row">
                 <i class="fa-solid fa-school"></i>
                 <span class="info-label">Maktab:</span>
-                <span class="info-value">Toyloq tumani 50-umumiy oʻrta ta’lim maktabi</span>
+                <span class="info-value">Toyloq tumani 50-umumiy oʻrta ta’lim maktabi bitiruvchisi</span>
             </div>
             <div class="info-row">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <span class="info-label">Oliy ta'lim (OTM):</span>
-                <span class="info-value">Qarshi davlat texnika universiteti, Sun’iy intellekt fakulteti 1-bosqich talabasi 👨🏻‍🎓</span>
+                <span class="info-value">Qarshi davlat texnika universiteti, Sun’iy intellekt fakulteti, 1-bosqich talabasi 👨🏻‍🎓</span>
             </div>
         </div>
 
@@ -436,7 +454,8 @@
         </div>
 
         <!-- Pastki mualliflik yozuvi -->
-        <p class="footer-text">© 2026 Dilshod Raxmatillayev. Barcha huquqlar himoyalangan.</p>
+        <p class="footer-text">© 2026 Dilshod Raxmatillayev Sherzodovich.
+            Barcha huquqlar himoyalangan.</p>
     </div>
 
 </body>
